@@ -1,0 +1,64 @@
+{% load static %}
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Login page</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'accounts/style.css' %}" >
+    </head>
+
+
+    <body>
+
+        <nav>
+            <ul>
+                <li><a href="{% url 'list' %}">Home</a></li>
+                {% if user.is_authenticated%}
+                    <li><a href="{% url 'user_post_list' user.id %}">내 서평</a></li>
+                    <li><a href="">내 정보보기</a></li>
+                    <li><a href="{% url 'post' %}">새 글 작성하기</a></li>
+                {%else%}
+                    <li><a href="{% url 'login' %}" onclick="alert('로그인 후 이용해주세요')">내 서평</a></li>
+                    <li><a href="" onclick="alert('로그인 후 이용해주세요')">내 정보보기</a></li>
+                    <li><a href="{% url 'post' %}" onclick="alert('로그인 후 이용해주세요')">새 글 작성하기</a></li>
+                {% endif%}
+
+            </ul>
+
+            <ul>
+                <li><a href="">로그인하기</a></li>
+                {% if user.is_authenticated%}
+                    <li><a href="{% url 'logout' %}">로그아웃</a></li>
+                {% else %}
+                    <li><a href="#" onclick="alert('이미 로그아웃 되었습니다!')">로그아웃</a></li>
+                {% endif %}
+            </ul>
+        </nav>  
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="ID">
+                <p>ID:</p>
+                <input type="text" name="username" placeholder="아이디를 입력하세요"><br>
+            </div>
+            <div class="Password">
+                <p>PassWord:</p>
+                <input type="password" name="password" placeholder="비밀번호를 입력하세요"><br>
+                
+            </div>
+            <div class="button">
+                <button type="submit">로그인</button>
+            </div>
+        </form>
+
+        {% if error %}
+            <p style="color:red">{{error}}</p>
+        {% endif %}
+
+        <div class="regi">
+            <a href="{% url "register" %}">회원가입하기</a>
+        </div>
+        
+    </body>
+
+</html>

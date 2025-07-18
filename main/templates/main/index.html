@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BookBlog</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}" >
+</head>
+
+<body>
+    <h1>BookBlog</h1>
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">내 블로그</a></li>
+            <li><a href="">내 정보보기</a></li>
+            <li><a href="{% url 'post' %}">새 글 작성하기</a></li>
+
+        </ul>
+
+        <ul>
+            <li><a href="">로그인하기</a></li>
+            <li><a href="">로그아웃</a></li>
+        </ul>
+    </nav>
+
+    <div class="reviewOfUser">
+        <p> 여기에 북 리뷰가 달릴거에요</p>
+        <p> 리뷰어 이름, 리뷰 쓴 책, 리뷰 내용</p>
+    </div>
+
+    <div class="reviewOfUser">
+        <p> 여기에 북 리뷰가 달릴거에요</p>
+        <p> 리뷰어 이름, 리뷰 쓴 책, 리뷰 내용</p>
+    </div>
+
+    <div class="reviewOfUser">
+        <p> 여기에 북 리뷰가 달릴거에요</p>
+        <p> 리뷰어 이름, 리뷰 쓴 책, 리뷰 내용</p>
+    </div>
+
+</body>
+</html>
