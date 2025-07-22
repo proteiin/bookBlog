@@ -33,7 +33,8 @@ login and post book reviews!
 
 
 ## Example Usage
-### [list page](https://velog.io/@sonj0407/%EA%B2%8C%EC%8B%9C%EA%B8%80-%EC%B6%9C%EB%A0%A5%ED%95%98%EB%8A%94-%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%A7%8C%EB%93%A4%EA%B8%B0)
+### [list page](<img width="430" height="340" alt="image" src="https://github.com/user-attachments/assets/16fc929a-d3da-4e98-b285-133171b614b7" />
+)
 <br>
 <img width="400" height="240" alt="listpage" src="https://github.com/user-attachments/assets/42383093-1b9f-4c86-a269-49a05bf3e3c4" />
 
