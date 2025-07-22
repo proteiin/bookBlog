@@ -1,10 +1,14 @@
 # BookBlog
 See interesting Book reviews and get interest!
 
+<br>
+
+
 ## Introduction
 login and post book reviews!
 
 <br>
+
 
 ## Funtions
 ### Implemented
@@ -12,7 +16,7 @@ login and post book reviews!
 - posting_list: you can view reviews 
 - register_page: register your ID
 - posts: post your book reviews
---------------------------------------------------------------
+
 ### To be implemented
 - recommended book reviews: using Matrix Factorization or deep learning
 - recommended books
@@ -23,10 +27,11 @@ login and post book reviews!
 
 <br>
 
+
 ## How to Install
 
 
-------------------------------------------------------------------
+
 ## Example Usage
 ### [list page](https://velog.io/@sonj0407/%EA%B2%8C%EC%8B%9C%EA%B8%80-%EC%B6%9C%EB%A0%A5%ED%95%98%EB%8A%94-%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%A7%8C%EB%93%A4%EA%B8%B0)
 <br>
