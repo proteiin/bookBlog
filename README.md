@@ -33,8 +33,7 @@ login and post book reviews!
 
 
 ## Example Usage
-### [list page](<img width="430" height="340" alt="image" src="https://github.com/user-attachments/assets/16fc929a-d3da-4e98-b285-133171b614b7" />
-)
+### [list page](img width="430" height="340" alt="image" src="https://github.com/user-attachments/assets/16fc929a-d3da-4e98-b285-133171b614b7")
 <br>
 <img width="400" height="240" alt="listpage" src="https://github.com/user-attachments/assets/42383093-1b9f-4c86-a269-49a05bf3e3c4" />
 
