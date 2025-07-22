@@ -1,3 +1,9 @@
+.gowun-dodum-regular {
+  font-family: "Gowun Dodum", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 html, body{
     height: 100%;
     margin: 0;
@@ -15,7 +21,7 @@ nav{
     display: flex;
     /* margin: 20px; */
     /* padding : 20px; */
-    background-color: #3498db;
+    background-color: #bfaf92;
     align-items: center;
 }
 
@@ -39,7 +45,7 @@ a{
 }
 
 nav ul li:hover {
-  background-color: #29b989;
+  background-color: #4d3c2d;
   /* border-radius: 20px; */
 }
 

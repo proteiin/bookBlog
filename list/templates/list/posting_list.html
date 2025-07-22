@@ -7,7 +7,18 @@
 <head>
     <meta charset="UTF-8">
     <title>list</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" type="text/css" href="{% static 'list/style.css' %}" >
+    
+     <style>
+      body {
+        font-family: 'Crimson Pro', serif;
+      }
+    </style>
 </head>
 
 <body>
@@ -33,7 +44,22 @@
                 <li><a href="#" onclick="alert('이미 로그아웃 되었습니다!')">로그아웃</a></li>
             {% endif %}
         </ul>
+
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+
+        <button onclick= "toggleBox()">
+            토글 버튼
+        </button>
+        <div id="box" class="hidden">
+            토글 영역입니다
+        </div>
+
     </nav>
+
 
 
     <h1>게시글</h1>
