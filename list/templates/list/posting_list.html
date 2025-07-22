@@ -19,6 +19,7 @@
         font-family: 'Crimson Pro', serif;
       }
     </style>
+    <script src="{% static 'list/postScript.js' %}"></script>
 </head>
 
 <body>
@@ -29,34 +30,18 @@
                 <li><a href="{% url 'user_post_list' user.id %}">내 서평</a></li>
                 <li><a href="">내 정보보기</a></li>
                 <li><a href="{% url 'post' %}">새 글 작성하기</a></li>
-            {% else %}
-                <li><a href="{% url 'login' %}" onclick="alert('로그인 후 이용해주세요')">내 서평</a></li>
-                <li><a href="" onclick="alert('로그인 후 이용해주세요')">내 정보보기</a></li>
-                <li><a href="{% url 'post' %}" onclick="alert('로그인 후 이용해주세요')">새 글 작성하기</a></li>
             {% endif%}
         </ul>
 
-        <ul>
-            <li><a href="{% url 'login' %}">로그인하기</a></li>
+        <ul class="log">
+            
             {% if user.is_authenticated%}
                 <li><a href="{% url 'logout' %}">로그아웃</a></li>
             {% else %}
-                <li><a href="#" onclick="alert('이미 로그아웃 되었습니다!')">로그아웃</a></li>
+                <li><a href="{% url 'login' %}">로그인하기</a></li>
             {% endif %}
         </ul>
 
-        <style>
-            .hidden {
-                display: none;
-            }
-        </style>
-
-        <button onclick= "toggleBox()">
-            토글 버튼
-        </button>
-        <div id="box" class="hidden">
-            토글 영역입니다
-        </div>
 
     </nav>
 
@@ -67,12 +52,12 @@
         {% for post in posts %}
             <div class="container">
                 <div class='title'> {{ post.title }}</div>
-                <div class='title'> {{ post.bookName }}</div>
-                <div class='author'>author: {{ post.author.username }}</div>
+                <div class='bookname'> {{ post.bookName }}</div>
+                <div class='author'> {{ post.author.username }}</div>
             </div>
 
             <div class='review'>
-                <p>review: {{ post.review }}</p>
+                <p> {{ post.review }}</p>
             </div>
             
             <p>{{ post.time }}</p>
