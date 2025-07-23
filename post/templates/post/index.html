@@ -7,6 +7,13 @@
     <meta charset="UTF-8">
     <title>post bookreview</title>
     <link rel="stylesheet" type="text/css" href="{% static 'post/style.css' %}" >
+<<<<<<< HEAD
+=======
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+>>>>>>> Son-JuneYeong
 </head>
 
 <body>
@@ -19,21 +26,15 @@
                 <li><a href="{% url 'user_post_list' user.id %}">내 서평</a></li>
                 <li><a href="">내 정보보기</a></li>
                 <li><a href="{% url 'post' %}">새 글 작성하기</a></li>
-            {%else%}
-                <li><a href="{% url 'login' %}" onclick="alert('로그인 후 이용해주세요')">내 서평</a></li>
-                <li><a href="" onclick="alert('로그인 후 이용해주세요')">내 정보보기</a></li>
-                <li><a href="{% url 'post' %}" onclick="alert('로그인 후 이용해주세요')">새 글 작성하기</a></li>
             {% endif%}
-            
-
         </ul>
 
-        <ul>
-            <li><a href="{% url 'login' %}">로그인하기</a></li>
+        <ul class="log">
+            
             {% if user.is_authenticated%}
                 <li><a href="{% url 'logout' %}">로그아웃</a></li>
             {% else %}
-                <li><a href="#" onclick="alert('이미 로그아웃 되었습니다!')">로그아웃</a></li>
+                <li><a href="{% url 'login' %}">로그인하기</a></li>
             {% endif %}
         </ul>
     </nav>
