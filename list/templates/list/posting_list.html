@@ -13,8 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" type="text/css" href="{% static 'list/style.css' %}" >
+    <script src = "{% static 'list/postScript.js' %}"></script>
     
-     <style>
+    <style>
       body {
         font-family: 'Crimson Pro', serif;
       }
@@ -51,7 +52,7 @@
     <div class = 'post_container'>
         
             {% for post in posts %}
-                <div class = "post_box">
+                <div class = "post_box" data-id="{{post.id}}" style="cursor: pointer">
                     <div class="container">
                         <div class='title'> {{ post.title }}</div>
                         <div class='bookname'> {{ post.bookName }}</div>

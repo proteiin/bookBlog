@@ -22,3 +22,4 @@ def create_Post(request):
         messages.error(request,"로그인 하고 이용하여 주십시오")
         return redirect('login')
 
+

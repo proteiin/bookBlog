@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404
 from post.models import PostModel
 from accounts.models import CustomUser
 
+from post.models import PostModel
+
 
 def post_list(request):
     posts = PostModel.objects.all()
@@ -17,3 +19,9 @@ def user_post_list(request, user_id):
                       'user':user,
                       'posts':posts}
                   )
+
+def post_detail(request, post_id):
+    post = get_object_or_404(PostModel, id=post_id)
+    return render(request, 'list/post_detail.html',{
+        'post': post
+    })
